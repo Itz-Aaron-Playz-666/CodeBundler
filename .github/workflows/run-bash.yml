@@ -12,6 +12,9 @@ jobs:
         node_version: ['18.x', '20.x']
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
-      - name: Install PNPM
+      - name: Install Packages
       run: |
+        echo "GitHub Terminal/Workflows Action Requested,Waiting..."
+        echo "Installing Packages..."
         npm i --save-dev next next-auth node react react-dom tailwindcss vite vue @types/react @types/node @types/next @types/react-dom
+        echo "Packages Installed"
