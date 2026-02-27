@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+jobs:
+  Emergency:
+    name: Incase I Ever Lose CodeSpaces
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node_version: ['18.x', '20.x']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+      - name: Install PNPM
+      run: | 
+        npm install -g pnpm
+        pnpm add next next-auth node react react-dom tailwindcss vite vue @types/react @types/node @types/next @types/react-dom
+          
