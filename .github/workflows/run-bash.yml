@@ -1,4 +1,6 @@
 name: Just Incase Of A Emegency That I Lost Access To All CodeSpaces
+permissions:
+  contents: read
 on:
   workflow_dispatch:
 jobs:
