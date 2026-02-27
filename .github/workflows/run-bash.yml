@@ -1,8 +1,9 @@
+name: Just Incase Of A Emegency That I Lost Access To All CodeSpaces
 on:
   workflow_dispatch:
 jobs:
   Emergency:
-    name: Incase I Ever Lose CodeSpaces
+    name: Incase I Ever Lose CodeSpaces(Foolproof)
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -10,7 +11,5 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
       - name: Install PNPM
-      run: | 
-        npm install -g pnpm
-        pnpm add next next-auth node react react-dom tailwindcss vite vue @types/react @types/node @types/next @types/react-dom
-          
+      run: |
+        npm i --save-dev next next-auth node react react-dom tailwindcss vite vue @types/react @types/node @types/next @types/react-dom
