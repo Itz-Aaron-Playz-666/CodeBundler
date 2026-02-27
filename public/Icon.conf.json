@@ -1,0 +1,9 @@
+{
+  "Item":{
+    "Type":"JSON"
+    "Contain":[
+      Icon.conf.json,
+      favicon.ico
+    ]
+  }
+}
