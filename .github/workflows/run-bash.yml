@@ -1,20 +1,24 @@
-name: Just Incase Of A Emegency That I Lost Access To All CodeSpaces
+name: Just Incase Of A Emergency That I Lost Access To All CodeSpaces
+
 permissions:
   contents: read
+
 on:
   workflow_dispatch:
+
 jobs:
   Emergency:
-    name: Incase I Ever Lose CodeSpaces(Foolproof)
+    name: Incase I Ever Lose CodeSpaces (Foolproof)
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node_version: ['18.x', '20.x']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Install Packages
-      run: |
-        echo "GitHub Terminal/Workflows Action Requested,Waiting..."
-        echo "Installing Packages..."
-        npm i --save-dev next next-auth node react react-dom tailwindcss vite vue @types/react @types/node @types/next @types/react-dom
-        echo "Packages Installed"
+        run: |
+          echo "GitHub Terminal/Workflows Action Requested, Waiting..."
+          echo "Installing Packages..."
+          npm i --save-dev next next-auth node react react-dom tailwindcss vite vue @types/react @types/node @types/next @types/react-dom
+          echo "Packages Installed"
+
