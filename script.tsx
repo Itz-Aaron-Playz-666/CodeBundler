@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import prettier from "prettier/standalone";
 import parserBabel from "prettier/parser-babel";
 import { Linter } from "eslint";
+import { AssignNode } from "three/webgpu";
 
 const CodeFormatter: React.FC = () => {
   const [code, setCode] = useState("");
@@ -36,6 +37,20 @@ const CodeFormatter: React.FC = () => {
     }
   };
 
+  const handleBuild = () => {
+    if (!formattedCode) return;
+
+    const blob = new Blob([formattedCode], { type: "text/javascript" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "formatted.js"; // filename for download
+    link.click();
+
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div style={{ padding: "1rem" }}>
       <h2>JavaScript Debug & Format Tool</h2>
@@ -47,7 +62,10 @@ const CodeFormatter: React.FC = () => {
         cols={60}
         style={{ display: "block", marginBottom: "1rem" }}
       />
-      <button onClick={handleProcess}>Format & Debug</button>
+      <button onClick={handleProcess} style={{ marginRight: "1rem" }}>
+        Format & Debug
+      </button>
+      <button onClick={handleBuild}>Build (Download JS)</button>
 
       <h3>Formatted Code:</h3>
       <pre
