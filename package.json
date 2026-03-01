@@ -1,0 +1,20 @@
+{
+	"dependencies": {
+		"@tailwindcss/cli": "^4.2.1",
+		"@types/eslint": "^9.6.1",
+		"@types/next": "^9.0.0",
+		"@types/node": "^25.3.3",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"@types/tailwindcss": "^3.1.0",
+		"@types/three": "^0.183.1",
+		"eslint": "^10.0.2",
+		"next": "^16.1.6",
+		"next-auth": "^4.24.13",
+		"node": "^25.7.0",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"tailwindcss": "^4.2.1",
+		"three": "^0.183.2"
+	}
+}
