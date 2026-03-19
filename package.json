@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@tailwindcss/cli": "^4.2.1",
+		"@tailwindcss/cli": "^4.2.2",
 		"@types/eslint": "^9.6.1",
 		"@types/next": "^9.0.0",
 		"@types/node": "^25.3.3",
